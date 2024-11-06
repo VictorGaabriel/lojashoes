@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/mc.png">
+    <title>VG SHOES</title>
+</head>
+<body>
+    <!-- Navegação -->
+    <main class="m_NAV">
+        <div class="nav">
+            <div class="navlogo">
+                <div class="logo">
+                    <img class="imglogo" src="assets/img/mc.png">
+                </div>
+                <h1>VG SHOES</h1>
+            </div>
+            <div class="navigation">
+                <a class='a1' href="index.html">Loja</a>
+                <a class='a1' href="#Carrinho">Carrinho</a>
+                <a class='a1' href="#novidades">Novidades</a>
+                <a class='a1' href="#footer">Contato</a>
+                <a class='a1' href="pages/Cadastro/bc.html">Cads.Produto</a>
+            </div>
+            <div class="pesquisa">
+                <button id="rock"></button>
+                <input class="input_pes" type="text" placeholder="Pesquisar" />
+            </div>
+            <div class="global">         
+                <a id='a' class="a3" href="#"></a> <!-- Link modificado para # -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Banner Oferta -->
+    <div class="content_oferta">
+        <div class="oferta">
+            <img id="imgof" class="imgoferta" src="assets/img/BANNER.png">
+        </div>
+    </div>
+
+    <!-- Seção de Produtos -->
+    <div class="content_loja">
+        <div class="destaque">
+            <div class="title">
+                <h2 id="nomee">Produtos Disponíveis</h2>
+                <div id="produtos-container" class="produtos-container">
+                    <!-- Produtos serão injetados dinamicamente aqui -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer_content">
+            <div class="rule"></div>
+            <div class="logoF">
+                <h1 style="font-size: 30px;">VG SHOES</h1>
+                <img class="imglogo" src="assets/img/mc.png" style="height: 50px; width: 90px;">
+            </div>
+            <div class="text">
+                <p>© 2024 </p>
+                <p>SAPATOS</p>
+            </div>
+            <div class="rule"></div>
+        </div>
+    </footer>
+
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-storage-compat.js"></script>
+
+    <!-- Custom Script -->
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Página do Usuário</title>
+</head>
+<body>
+    <h1>Bem-vindo à sua conta</h1>
+    <p>Email: <span id="user-email"></span></p>
+    <button onclick="logout()">Sair</button>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+    <script>
+        // Firebase Configuration
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID",
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Exibir email do usuário
+        firebase.auth().onAuthStateChanged(user => {
+            if (user) {
+                document.getElementById('user-email').innerText = user.email;
+            } else {
+                window.location.href = "index.html"; // Redireciona se não estiver logado
+            }
+        });
+
+        // Função para lidar com logout
+        function logout() {
+            firebase.auth().signOut().then(() => {
+                window.location.href = "index.html"; // Redireciona após logout
+            });
+        }
+    </script>
+</body>
+</html>

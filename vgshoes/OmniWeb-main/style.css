@@ -1,0 +1,287 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Germania One', system-ui;
+}
+
+body {
+    background-color: #ddc045;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: #d4d4d4;
+}
+
+.m_NAV {
+    height: 90px;
+    width: 100%;
+    justify-content: center;
+}
+
+.nav {
+    flex-wrap: wrap;
+    position: fixed;
+    background-color: rgb(3, 5, 40);
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 90px;
+    width: 100%;
+}
+
+.navlogo {
+    margin: 0% 8%;
+    display: flex;
+    align-items: center;
+}
+
+.imglogo, .logo {
+    width: 80px;
+    height: 80px;
+}
+
+.a1 {
+    padding: 47px 7px 7px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.global {
+    position: absolute;
+    right: 27px;
+    top: 16px;
+}
+
+.a2, .a3 {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.content_oferta {
+    width: 100%;
+    padding: 0 0 10px 0;
+    background-color: black;
+    margin: 0 0 100px;
+}
+
+.oferta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgoferta {
+    width: 100%;
+    height: auto;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(3, 5, 40);
+    color: #d4d4d4;
+    padding: 16px 0;
+    width: 100%;
+}
+
+.footer_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.rule {
+    border-top: 1px solid #d4d4d4;
+    width: 100%;
+}
+
+.logoF {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.pesquisa {
+    display: flex;
+    padding: 0 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background-color: black;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+    border-style: none;
+}
+
+button:hover {
+    scale: 1.1;
+}
+
+.content_loja {
+    background-color: rgba(0, 0, 0, 0.87);
+    margin: 0 0 20px 0;
+    padding: 10px;
+    width: 80%;
+    border-radius: 4%;
+}
+
+.title {
+    color: white;
+    padding: 10px 40px 0 20px;
+    margin-bottom: 10px;
+}
+
+#valor, .nome {
+    font-size: 20px;
+}
+
+.infor {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    width: 100%;
+    min-height: auto;
+}
+
+.produto-frame {
+    background-color: white; /* Moldura branca */
+    padding: 20px;
+    margin: 15px;
+    border-radius: 15px; /* Bordas arredondadas da moldura */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor da moldura */
+}
+
+.produto {
+    background-color: #f5f5f5; /* Fundo ligeiramente cinza para contraste */
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 0px; /* Margin zerada porque está dentro da moldura */
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px; /* Altura mínima para manter o alinhamento */
+    border-radius: 8px;
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.produto .infor {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.produto .valor {
+    font-size: 10px; /* Diminui o tamanho do texto do valor */
+    color: #333;
+    font-weight: bold;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and smaller devices */
+@media (max-width: 1000px) {
+    .produto {
+        width: 45%;
+    }
+    .produto-frame {
+        width: 45%;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .produto {
+        width: 100%;
+    }
+    .produto-frame {
+        width: 100%;
+    }
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Germania One', system-ui;
+}
+
+body {
+    background-color: #ddc045;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Moldura do produto */
+.produto-frame {
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 10px;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o conteúdo do produto */
+.produto {
+    text-align: center;
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.infor .nome {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.infor .descricao {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.infor .valor {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}

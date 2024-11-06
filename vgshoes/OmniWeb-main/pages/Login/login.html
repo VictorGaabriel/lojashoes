@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="l_style.css">
+    <link rel="icon" type="image/x-icon" href="l_img/logo1.png">
+    <title>OmniGames</title>
+</head>
+<body class="centralize">
+  <!--BARRA NAV-->
+  <div class="nav">
+    <div class="navlogo">
+        <div class="logo">
+            <img class="imglogo" src="l_img/logo1.png">
+        </div>
+        <a id="backhome" href="../../index.html"><h1>OMNIGAMES</h1></a>
+    </div>
+    <a class="a1" id="logout-button" href="#">Sair</a> <!-- Botão de Logout -->
+  </div>
+
+  <div class="container">
+      <a class="links" id="paracadastro"></a>
+      <a class="links" id="paralogin"></a>
+      <a class="links" id="pararecu"></a>
+       
+      <div class="content">
+        <!--RECU--> 
+        <div id="recuperação">
+          <form method="post" action="">
+            <h1>Recuperação de senha</h1>            
+            <p>
+              <label>Email</label>
+              <input type="email" name="email" id="emailRec" placeholder="seu@email.com" onchange="onChangeEmail()"/>
+            </p>                     
+            <p> 
+              <button type="button" class="solid" id="recover-password-button" onclick="recoverPassword()">Recuperar</button> 
+            </p>          
+            <p class="link">  
+              Lembrou?
+              <a href="#paralogin"> Ir para Login </a>
+            </p>
+            <br><br><br>  
+          </form>
+        </div>     
+        
+        <!--LOGIN-->
+        <div id="login">
+          <form> 
+            <h1>Login</h1> 
+            <p>
+              <label>Email</label>
+              <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="onChangeEmail()"/>
+            </p>
+            <p> 
+              <label>Senha</label>
+              <input type="password" name="password" id="password" placeholder="Senha" onchange="onChangePassword()"/>
+            </p>             
+            <p> 
+              <button type="button" class="solid" id="login-button" onclick="login()">Logar</button> 
+            </p>
+            <p class="link">
+              Esqueceu a senha?
+              <a href="#pararecu">Recupere aqui</a>
+            </p>                    
+            <p class="link">
+              Ainda não tem conta?
+              <a href="#paracadastro">Cadastre-se</a>
+            </p>
+          </form>
+        </div>   
+
+        <!--CADASTRO-->
+        <div id="cadastro">
+          <form> 
+            <h1>Cadastro</h1>                        
+            <p> 
+              <label>Email</label>
+              <input type="email" placeholder="seu@email.com" onchange="onChangeEmail()" id="emailReg"/>
+            </p>          
+            <p> 
+              <label>Sua senha</label>
+              <input type="password" placeholder="Senha" id="passwordReg" onchange="onChangePassword()"/>
+            </p>             
+            <p> 
+              <button type="button" class="solid" id="register-button" onclick="register()">Registrar</button>
+            </p>            
+            <p class="link">  
+              Já tem conta?
+              <a href="#paralogin"> Ir para Login </a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>  
+  </body>
+  
+  <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+  <script src="login.js"></script>
+</html>

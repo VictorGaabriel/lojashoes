@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bc.css">
+    <link rel="icon" type="image/x-icon" href="../../assets/img/logo1.png">
+
+    <!-- Firebase compat libraries -->
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-storage-compat.js"></script>
+
+    <!-- Script do projeto -->
+    <script src="bc.js"></script>
+
+    <title>Cadastro </title>
+</head>
+<body>
+    <main class="m_NAV">
+        <div class="nav">
+            <div class="navlogo">
+                <div class="logo">
+                    <img class="imglogo" src="../../assets/img/mc.png">
+                </div>
+                <h1>VG SHOES</h1>
+            </div>
+            <div class="navigation">
+                <a class='a1' href="../../index.html">Loja</a>
+                <a class='a1' href="#Carrinho">Carrinho</a>
+                <a class='a1' href="#novidades">Novidades</a>
+                <a class='a1' href="#footer">Contato</a>
+            </div>
+            <div class="pesquisa">
+                <button id="rock"></button>
+                <input class="input_pes" type="text" placeholder="Pesquisar" />
+            </div>
+            <div class="global">
+                <a id='a' class="a3" href="../Login/login.html"></a>
+            </div>
+        </div>
+    </main>
+
+    <div class="box_bc">
+        <div class="box_cadastro">
+            <h2 class="title">Cadastro</h2>
+            <label>ID</label>
+            <input id='id'>
+        
+            <label>Nome do Sapato</label>
+            <input id="nome">
+        
+            <label>valor</label>
+            <input type="number" id="valor">
+        
+            <label>Descrição</label>
+            <textarea id="desc"></textarea>
+        
+            <label>Imagem</label>
+            <input type="file" accept="image/png, image/jpeg" id="foto">
+        
+            <button onclick="cadastrar()">Cadastrar</button>
+        </div>
+
+        <div class="box_pesquisa">
+            <h2 class="title">Pesquisar e Alterar</h2>
+            <label>ID</label>
+            <input id='id_p'>
+        
+            <label>Nome do Sapato</label>
+            <input id="nome_p">
+        
+            <label>valor</label>
+            <input type="number" id="valor_p">
+        
+            <label>Descrição</label>
+            <textarea id="desc_p"></textarea>
+        
+            <label>Imagem</label>
+            <div id="image">
+                <img id="img">
+            </div>
+            
+            <div class="button_container">
+                <button onclick="pesquisar()">Pesquisar</button>
+                <button onclick="alterar()">Alterar</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer_content">
+            <div class="rule"></div>
+            <div class="logoF">
+                <h1 style="font-size: 30Px;">VG SHOES</h1>
+                <img class="imglogo" src="../../assets/img/mc.png" style="height: 50px; width: 90px;">
+            </div>
+            <div class="text">
+            
+            </div>
+            <div class="rule"></div>
+          
+        </div>
+    </footer>   
+</body>
+</html>
